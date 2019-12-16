@@ -1,0 +1,23 @@
+.log-in-cointainer p {
+  font-size: 30px;
+  margin-top: 50px;
+  opacity: 0.8;
+}
+
+.log-in-cointainer a {
+  color: #5489a3;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logo-log-in {
+  font-size: 250px;
+  font-weight: 500;
+  margin-top: 25%;
+}
+
+.btn {
+  width: 700px;
+  height: 135px;
+  font-size: 60px;
+}
