@@ -1,11 +1,11 @@
 .settings-container {
-  margin-top: 150px;
+  margin-top: 130px;
   width: 100%;
   height: calc(100vh - 150px);
 }
 
 .image-flex {
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
@@ -13,7 +13,8 @@
 .image-flex img {
   display: inline-block;
   border-radius: 50%;
-  width: 430px;
+  width: 400px;
+  height: 400px;
 }
 
 a {
@@ -38,7 +39,7 @@ a {
 
 .logout {
   background-color: red;
-  opacity: .95;
+  opacity: 0.95;
 }
 
 .button-structure p {
@@ -57,7 +58,6 @@ a {
   .settings-container {
     margin-top: 70px;
   }
-
   .image-flex {
     margin-bottom: 100px;
   }
@@ -65,29 +65,13 @@ a {
     width: 170px;
     height: 170px;
   }
-
   .button-structure {
-    width: 721px;
-    height: 130px;
-    background-color: #ffb600;
-    border-radius: 50px;
-    margin: 100px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+    width: 450px;
+    height: 80px;
+    margin: 70px auto;
   }
-
-  .logout {
-    background-color: red;
-    opacity: .95;
-  }
-
   .button-structure p {
-    display: inline-block;
-    background-color: transparent;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 350;
   }
-
-
+}

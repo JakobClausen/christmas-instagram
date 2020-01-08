@@ -72,3 +72,28 @@ a {
 input[type="file"] {
   display: none;
 }
+
+@media screen and (min-width: 1000px) {
+  .image-flex {
+    padding-top: 30px;
+  }
+  .image-flex img {
+    width: 530px;
+    height: 530px;
+    opacity: 0.7;
+  }
+
+  .image-flex h1 {
+    font-size: 400px;
+  }
+  .button-structure {
+    width: 500px;
+    height: 80px;
+    margin: 100px auto;
+  }
+
+  .button-structure p {
+    font-size: 25px;
+    font-weight: 350;
+  }
+}
