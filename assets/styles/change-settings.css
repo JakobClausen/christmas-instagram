@@ -1,11 +1,7 @@
-* {
-  background-color: #3e4451;
-}
-
 label {
   font-size: 30px;
   margin: auto;
-  color: #ffffff;
+  color: #000000;
   float: left;
   padding-top: 20px;
   opacity: 0.8;
@@ -18,7 +14,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  color: #ffffff;
+  color: black;
   font-size: 45px;
   font-weight: 300;
   opacity: 0.8;
@@ -29,17 +25,13 @@ input {
   height: 95px;
   margin: 20px auto;
   border: none;
-  border-bottom: 1px solid #ffb600;
-}
-.logo-log-in {
-  color: #ffffff;
-  text-align: center;
+  border-bottom: 3px solid #ffb600;
 }
 
-.log-in-cointainer {
+.change-cointainer {
   width: 100%;
   position: absolute;
-  top: 63%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -48,16 +40,15 @@ input {
   width: 700px;
 }
 
-.logo-p {
-  color: #ffb600;
-}
-
 .btn {
+  width: 700px;
+  height: 135px;
+  font-size: 40px;
   border-radius: 50px;
-  background-color: #20222c;
+  background-color: #ffb600;
   border: none;
-  color: #ffffff;
-  margin-top: 200px;
+  color: black;
+  margin-top: 500px;
   -webkit-box-shadow: 0px 10px 51px -17px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 10px 51px -17px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 10px 51px -17px rgba(0, 0, 0, 0.75);

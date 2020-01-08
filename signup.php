@@ -1,8 +1,9 @@
 <?php
 
-require __DIR__.'/views/header.php'; ?>
+ ?>
 <link rel="stylesheet" href="assets/styles/startscreen.css">
 <link rel="stylesheet" href="assets/styles/signup.css">
+
 
 <a href="login.php"><img src="/assets/img/arrow.svg" alt=""></a>
 
@@ -39,4 +40,4 @@ require __DIR__.'/views/header.php'; ?>
 </div>
 
 
-<?php require __DIR__.'/views/footer.php'; ?>
+<?php  ?>
