@@ -79,7 +79,7 @@
 }
 
 .biography-section p {
-  background-color: #c4c4c4;
+  background-color: transparent;
   font-size: 35px;
   display: inline-block;
 }
@@ -101,11 +101,6 @@
   bottom: 0;
 }
 
-.button-container button {
-  font-size: 35px;
-  color: black;
-}
-
 button {
   font-size: 35px;
   color: black;
@@ -113,7 +108,72 @@ button {
   width: 135px;
   height: 135px;
   border-radius: 50%;
-  font-size: 80px;
-  color: #ffffff;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+  .profile-container {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .profil-information-container {
+    height: auto;
+    padding-top: 80px;
+  }
+
+  .profil-flex img {
+    width: 120px;
+  }
+  .profile-username p {
+    font-size: 25px;
+  }
+
+  .profile-followers p {
+    font-size: 20px;
+  }
+
+  .images-container {
+    margin-top: 7%;
+  }
+
+  .post-container {
+    width: 550px;
+  }
+
+  .post-container:last-child {
+    margin-bottom: 100px;
+  }
+
+  .post-container img {
+    max-height: 500px;
+    width: 520px;
+  }
+
+  /* biography section */
+
+  .biography-section {
+    width: 450px;
+    height: 80px;
+    background-color: #c4c4c4;
+  }
+
+  .biography-section p {
+    font-size: 20px;
+  }
+
+  .Description {
+    font-size: 17px;
+  }
+
+  .button-container {
+    height: 100px;
+    padding-top: 5px;
+  }
+
+  button {
+    font-size: 25px;
+    width: 90px;
+    height: 90px;
+  }
 }

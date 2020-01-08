@@ -32,11 +32,11 @@ require __DIR__.'/app/users/show-user-info.php';
                 </div>
             </div>
 
-            <div class="profile-like-container">
-                <div class="profile-right-container">
+            <div class="profile-container">
+                <div class="profile-left-container">
                     <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
 
-                    <div>
+                    <div class="followers">
                         <p><?php echo $post['username']; ?></p>
                         <p>100 Followers</p>
                     </div>
@@ -61,5 +61,6 @@ require __DIR__.'/app/users/show-user-info.php';
 </div>
 
 <section class="button-container"><a href="/upload.php"><button>+</button></a></section>
+
 
 <script src="/assets/scripts/like.js"></script>

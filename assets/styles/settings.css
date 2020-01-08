@@ -37,7 +37,8 @@ a {
 }
 
 .logout {
-  color: red;
+  background-color: red;
+  opacity: .95;
 }
 
 .button-structure p {
@@ -51,3 +52,42 @@ a {
   display: flex;
   justify-content: center;
 }
+
+@media screen and (min-width: 1000px) {
+  .settings-container {
+    margin-top: 70px;
+  }
+
+  .image-flex {
+    margin-bottom: 100px;
+  }
+  .image-flex img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .button-structure {
+    width: 721px;
+    height: 130px;
+    background-color: #ffb600;
+    border-radius: 50px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+
+  .logout {
+    background-color: red;
+    opacity: .95;
+  }
+
+  .button-structure p {
+    display: inline-block;
+    background-color: transparent;
+    font-size: 35px;
+    font-weight: 350;
+  }
+
+

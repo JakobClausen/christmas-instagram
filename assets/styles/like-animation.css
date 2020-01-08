@@ -45,3 +45,21 @@
   pointer-events: none;
   cursor: not-allowed;
 }
+
+@media screen and (min-width: 1000px) {
+  .like-container {
+    width: 500px;
+    height: 60px;
+  }
+
+  .bookmark-img {
+    width: 65px;
+  }
+
+  .like-img img:first-child {
+    width: 25px;
+
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}

@@ -6,6 +6,7 @@ declare(strict_types=1);
 ?>
 <link rel="stylesheet" href="assets/styles/main.css">
 <link rel="stylesheet" href="../assets/styles/header-upload.css">
+<link rel="stylesheet" href="../assets/styles/header-desktop.css">
 
 <div class="header-container">
 
@@ -13,7 +14,7 @@ declare(strict_types=1);
 
 <A href="javascript:javascript:history.go(-1)"><img class="arrow-back" src="../assets/img/arrow-left.png" alt=""></a>
 
-    <p>FLIPU<span>P</span></p>
+    <p class="text-logo ">FLIPU<span>P</span></p>
 
     <img class="header-profile" src="../assets/img/user.svg" alt="">
 
