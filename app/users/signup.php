@@ -29,7 +29,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
 
 
     $_SESSION['user'] = $user;
-    header('location: ../../index.php');
+    header('location: ../../add-profile-picture.php');
+    exit;
 
 
 

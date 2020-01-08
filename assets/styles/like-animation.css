@@ -1,0 +1,47 @@
+.like-container {
+  width: 721px;
+  height: 100px;
+  margin: auto;
+}
+.like-img {
+  display: inline-block;
+  margin-top: -15px;
+  margin-left: 40px;
+}
+.hover:hover {
+  margin-top: -8px;
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+.like-img img:first-child {
+  position: absolute;
+  width: 35px;
+  background-color: transparent;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.not-liked {
+  opacity: 0.6;
+}
+
+.jakob {
+  opacity: 1;
+}
+.bookmark-img {
+  width: 85px;
+  z-index: -1;
+}
+.bookmark-liked-up {
+  margin-top: -90px;
+  transition-duration: 200ms;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.bookmark-liked-down {
+  margin-top: -15px;
+  transition-duration: 200ms;
+  pointer-events: none;
+  cursor: not-allowed;
+}

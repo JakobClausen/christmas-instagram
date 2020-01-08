@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__.'/views/header.php'; ?>
-
+ ?>
+<link rel="stylesheet" href="assets/styles/main.css">
 <link rel="stylesheet" href="assets/styles/startscreen.css">
 <link rel="stylesheet" href="assets/styles/login.css">
 
@@ -31,4 +31,4 @@ require __DIR__.'/views/header.php'; ?>
 </div>
 
 
-<?php require __DIR__.'/views/footer.php'; ?>
+<?php ?>
