@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="assets/styles/signup.css">
 
 
+
 <a href="login.php"><img src="/assets/img/arrow.svg" alt=""></a>
 
 <h1 class="logo-log-in">SIGN U<span class="logo-p">P</span></h1>

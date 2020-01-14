@@ -5,14 +5,14 @@ declare(strict_types=1);
 
 ?>
 <link rel="stylesheet" href="assets/styles/main.css">
-<link rel="stylesheet" href="../assets/styles/header.css">
-<link rel="stylesheet" href="../assets/styles/header-desktop.css">
+<link rel="stylesheet" href="../assets/styles/header/header.css">
+<link rel="stylesheet" href="../assets/styles/header/header-desktop.css">
 
 <div class="header-container">
 
 <div class="header-flex">
 
-    <img src="../assets/img/search.svg" alt="">
+<a href="/search.php"><img src="../assets/img/search.svg" alt=""></a>
 
     <p class="text-logo">FLIPU<span>P</span></p>
 

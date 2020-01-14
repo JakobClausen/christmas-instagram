@@ -19,10 +19,6 @@ if (isset($_POST['current'], $_POST['new'], $_POST['confirm'])) {
             $stmt->bindParam(':id', $userId, PDO::PARAM_STR);
             $stmt->bindParam(':email', $new);
             $stmt->execute();
-
-            echo 'hello';
-
-
         }
     }
 }

@@ -1,22 +1,19 @@
 const likeButtons = document.querySelectorAll(".like-img");
 const likeHearts = document.querySelectorAll(".like-heart-img");
+const likeForms = document.querySelectorAll(".like-form");
+const likeNumbers = document.querySelectorAll(".post-likes");
 
-likeButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    button.classList.add("bookmark-liked-up");
-    button.classList.remove("hover");
+likeButtons.forEach(likeButton => {
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.add("bookmark-liked-up");
+    likeButton.classList.remove("hover");
+
+    const likeHeart = likeButton.childNodes[3];
+    console.log(likeHeart);
 
     setTimeout(() => {
-      button.classList.add("bookmark-liked-down");
-    }, 500);
-  });
-});
-
-likeHearts.forEach(likeHeart => {
-  likeHeart.addEventListener("click", () => {
-    setTimeout(() => {
-      likeHeart.classList.add("jakob");
-      likeHeart.classList.remove("not-liked");
+      likeButton.classList.add("bookmark-liked-down");
+      likeHeart.classList.add("like-heart-img-active");
     }, 500);
   });
 });

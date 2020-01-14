@@ -5,8 +5,8 @@ declare(strict_types=1);
 
 ?>
 <link rel="stylesheet" href="assets/styles/main.css">
-<link rel="stylesheet" href="../assets/styles/header-profile.css">
-<link rel="stylesheet" href="../assets/styles/header-desktop.css">
+<link rel="stylesheet" href="../assets/styles/header/header-profile.css">
+<link rel="stylesheet" href="../assets/styles/header/header-desktop.css">
 
 
 <div class="header-container">

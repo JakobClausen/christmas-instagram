@@ -1,0 +1,33 @@
+.header-container {
+  position: fixed;
+  width: 100%;
+  top: -2px;
+  -webkit-box-shadow: 0px 2px 27px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 27px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 27px -8px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 5%;
+}
+
+.header-flex img {
+  width: 45px;
+}
+
+.header-profile {
+  opacity: 0;
+}
+
+.text-logo {
+  font-size: 45px;
+  font-weight: 500;
+  margin: 0;
+}
+
+span {
+  color: #ffb600;
+}

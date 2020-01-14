@@ -5,6 +5,7 @@ require __DIR__.'/app/redirect.php';
 require __DIR__.'/views/header.php';
 require __DIR__.'/app/users/feedcontent.php';
 require __DIR__.'/app/users/show-user-info.php';
+require __DIR__.'/app/users/like.php';
 
 
 
@@ -26,10 +27,16 @@ require __DIR__.'/app/users/show-user-info.php';
             </div>
 
             <div class="like-container">
-                <div class="like-img hover ">
-                    <img class="like-heart-img not-liked" src="/assets/img/heart-empty.svg" alt="">
+                <form action="/index.php" method="post" class="like-form">
+                <div class="like-img hover">
+                    <input style="display: none;" name="like-id" value="<?php echo $post['ID'];?>">
+                    <img class="like-heart-img" src="/assets/img/heart-empty.svg" alt="">
                     <img class="bookmark-img" src="/assets/img/bookmark.svg" alt="">
                 </div>
+                </form>
+
+                <p class="post-likes"><?php echo $post['post_likes'];?></p>
+
             </div>
 
             <div class="profile-container">
@@ -61,6 +68,6 @@ require __DIR__.'/app/users/show-user-info.php';
 </div>
 
 <section class="button-container"><a href="/upload.php"><button>+</button></a></section>
-
-
 <script src="/assets/scripts/like.js"></script>
+
+

@@ -9,7 +9,7 @@ echo $userId;
 ?>
 
 <link rel="stylesheet" href="/assets/styles/main.css">
-<link rel="stylesheet" href="/assets/styles/settings.css">
+<link rel="stylesheet" href="/assets/styles/profile/settings.css">
 
 
 <div class="settings-container">

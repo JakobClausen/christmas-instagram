@@ -10,7 +10,7 @@ require __DIR__.'/app/users/show-user-info.php';
 ?>
 
 <link rel="stylesheet" href="/assets/styles/main.css">
-<link rel="stylesheet" href="/assets/styles/change-profile-pic.css">
+<link rel="stylesheet" href="/assets/styles/profile/change-profile-pic.css">
 
 
 <div class="settings-container">
