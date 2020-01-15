@@ -79,22 +79,21 @@ input[type="file"] {
     padding-top: 30px;
   }
   .image-flex img {
-    width: 530px;
-    height: 530px;
-    opacity: 0.7;
+    width: 400px;
+    height: 400px;
   }
 
   .image-flex h1 {
     font-size: 400px;
   }
   .button-structure {
-    width: 500px;
-    height: 80px;
+    width: 400px;
+    height: 70px;
     margin: 100px auto;
   }
 
   .button-structure p {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 350;
   }
 }

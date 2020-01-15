@@ -1,11 +1,9 @@
-.post-container:first-child {
-  margin-top: 230px;
-}
-
 .post-container {
+  margin-top: 330px;
   width: 100%;
-  height: calc(100vh - 300px);
-  margin-top: 100px;
+}
+.post-container:last-child {
+  margin-bottom: 200px;
 }
 
 .img-container {
@@ -13,8 +11,8 @@
   width: 721px;
   max-height: 550px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   z-index: 3;
   overflow: hidden;
   border-radius: 10%;
@@ -48,6 +46,15 @@
   width: 115px;
   height: 115px;
   border-radius: 50%;
+}
+
+.post-likes {
+  position: absolute;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 50px;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .followers p {
@@ -120,7 +127,6 @@ button {
     margin-top: 75px;
   }
   .post-container {
-    height: calc(100vh - 200px);
     margin-top: 200px;
   }
 
@@ -128,37 +134,31 @@ button {
     margin-bottom: 100px;
   }
   .img-post {
-    width: 500px;
+    width: 450px;
   }
   .img-container {
     margin: auto;
-    width: 500px;
-    min-height: 250px;
+    width: 450px;
+    max-height: 350px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  .img-post {
-    width: 100%;
-    max-height: 900px;
-    object-fit: contain;
-    border-radius: 10%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
-    margin: 5px auto;
-    z-index: 2;
+    justify-content: center;
+    align-items: center;
   }
 
   .profile-container {
-    width: 500px;
+    width: 450px;
     margin: 20px auto;
   }
 
   .profile-container img {
     width: 70px;
     height: 70px;
+  }
+
+  .post-likes {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 20px;
   }
 
   .followers p {
@@ -169,24 +169,15 @@ button {
   .follow-button {
     height: 40px;
     width: 100px;
-    background-color: #ffb600;
-    right: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
   }
   .follow-button p {
     font-size: 13px;
   }
 
   .biography-section {
-    width: 450px;
-    height: 65px;
-    background-color: #c4c4c4;
-    opacity: 0.3;
+    width: 400px;
+    height: 55px;
     padding: 30px;
-    margin: auto;
   }
 
   .biography-section p {
@@ -194,7 +185,7 @@ button {
   }
 
   .Description {
-    width: 500px;
+    width: 440px;
     margin: auto;
     font-size: 17px;
   }

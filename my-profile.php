@@ -18,7 +18,9 @@ require __DIR__.'/app/users/show-user-info.php';
 
     <div class="profil-information-container">
         <div class="profil-flex">
-        <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
+            <div class="profile-img-container">
+                <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
+            </div>
     </div>
     <div class="profile-username profil-flex">
         <p><?php echo $_SESSION['user']['username'] ?></p>

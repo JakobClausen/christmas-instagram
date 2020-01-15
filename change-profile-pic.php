@@ -20,9 +20,10 @@ require __DIR__.'/app/users/show-user-info.php';
 <label class="custom-file-upload">
             <input type="file" name="image" onChange="displayImage(this)" id="profileImage" / >
             <div class="image-flex">
-        <img src="<?php echo $info[0]['profile_picture'] ?>" alt="" onClick="triggerClick()" id="profileDisplay">
-        <h1>+</h1>
-    </div>
+
+                    <img src="<?php echo $info[0]['profile_picture'] ?>" alt="" onClick="triggerClick()" id="profileDisplay">
+                    <h1>+</h1>
+             </div>
 
 </label>
 

@@ -15,7 +15,9 @@ echo $userId;
 <div class="settings-container">
 
     <div class="image-flex">
-        <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
+        <div class="img-container">
+            <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
+        </div>
     </div>
 
     <a class="link" href="/change-profile-pic.php"><div class="button-structure"><p>Change profile picture</p></div></a>

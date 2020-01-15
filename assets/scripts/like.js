@@ -9,7 +9,6 @@ likeButtons.forEach(likeButton => {
     likeButton.classList.remove("hover");
 
     const likeHeart = likeButton.childNodes[3];
-    console.log(likeHeart);
 
     setTimeout(() => {
       likeButton.classList.add("bookmark-liked-down");

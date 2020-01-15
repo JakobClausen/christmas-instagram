@@ -10,11 +10,20 @@
   justify-content: center;
   margin-bottom: 100px;
 }
-.image-flex img {
-  display: inline-block;
+
+.img-container {
   border-radius: 50%;
   width: 400px;
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }
 
 a {
@@ -59,16 +68,20 @@ a {
     margin-top: 70px;
   }
   .image-flex {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
-  .image-flex img {
+  .img-container {
     width: 170px;
     height: 170px;
   }
+  .img-container img {
+    width: 100%;
+  }
+
   .button-structure {
     width: 450px;
     height: 80px;
-    margin: 70px auto;
+    margin: 40px auto;
   }
   .button-structure p {
     font-size: 20px;

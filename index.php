@@ -5,7 +5,6 @@ require __DIR__.'/app/redirect.php';
 require __DIR__.'/views/header.php';
 require __DIR__.'/app/users/feedcontent.php';
 require __DIR__.'/app/users/show-user-info.php';
-require __DIR__.'/app/users/like.php';
 
 
 
@@ -27,15 +26,14 @@ require __DIR__.'/app/users/like.php';
             </div>
 
             <div class="like-container">
-                <form action="/index.php" method="post" class="like-form">
-                <div class="like-img hover">
-                    <input style="display: none;" name="like-id" value="<?php echo $post['ID'];?>">
+                <form action="index.php" method="post" class="like-form">
+                <div class="like-img hover" onclick="like_add('<?php echo $post['ID'];?>')">
+                    <input style="display: none;" class="like-id">
                     <img class="like-heart-img" src="/assets/img/heart-empty.svg" alt="">
                     <img class="bookmark-img" src="/assets/img/bookmark.svg" alt="">
                 </div>
+                <p id="likes-value_<?php echo $post['ID'];?>" class="post-likes"><?php echo $post['post_likes'];?> likes</p>
                 </form>
-
-                <p class="post-likes"><?php echo $post['post_likes'];?></p>
 
             </div>
 
@@ -68,6 +66,8 @@ require __DIR__.'/app/users/like.php';
 </div>
 
 <section class="button-container"><a href="/upload.php"><button>+</button></a></section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/assets/scripts/like.js"></script>
+<script src="/assets/scripts/like-update.js"></script>
 
 
