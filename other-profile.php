@@ -38,7 +38,9 @@ require __DIR__.'/app/users/other-profile.php';
     <?php foreach ($posts as $post): ?>
 
             <div class="post-container">
+            <div class="img-container">
                 <img src="<?php echo $post['image']; ?>" alt="img" class="img">
+            </div>
 
 
 

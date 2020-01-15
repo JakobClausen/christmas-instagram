@@ -16,7 +16,9 @@ require __DIR__.'/app/users/edit.php';
 <div class="settings-container">
 
 <div class="post-container" id="<?php echo $posts[0]['ID'] ?>">
-                <img src="<?php echo $posts[0]['image']; ?>" alt="img" class="img">
+                <div class="img-container">
+                    <img src="<?php echo $posts[0]['image']; ?>" alt="img" class="img">
+                </div>
 
                 <form action="/app/posts/update.php" method="post">
                     <div class="textarea-container">

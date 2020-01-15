@@ -33,7 +33,10 @@ require __DIR__.'/app/users/show-user-info.php';
     <?php foreach ($posts as $post): ?>
 
             <div class="post-container" id="<?php echo $post["ID"] ?>">
-                <img src="<?php echo $post['image']; ?>" alt="img" class="img">
+
+                <div class="img-container">
+                    <img src="<?php echo $post['image']; ?>" alt="img" class="img">
+                </div>
 
 
 
