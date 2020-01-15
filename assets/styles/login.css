@@ -21,3 +21,22 @@
   height: 135px;
   font-size: 60px;
 }
+
+@media screen and (min-width: 1000px) {
+  .log-in-cointainer p {
+    font-size: 20px;
+    margin-top: 20px;
+    opacity: 0.8;
+  }
+
+  .logo-log-in {
+    font-size: 180px;
+    margin-top: 0;
+  }
+
+  .btn {
+    width: 450px;
+    height: 80px;
+    font-size: 30px;
+  }
+}

@@ -54,3 +54,36 @@ input {
   box-shadow: 0px 10px 51px -17px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
+
+@media screen and (min-width: 1000px) {
+  label {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 25px;
+    font-weight: 300;
+    opacity: 0.8;
+    height: 50px;
+  }
+
+  input {
+    height: 95px;
+    margin: 20px auto;
+  }
+
+  .change-cointainer {
+    top: 58%;
+    left: 50%;
+    width: 500px;
+  }
+
+  .btn {
+    width: 450px;
+    height: 80px;
+    font-size: 20px;
+    margin-top: 240px;
+  }
+}

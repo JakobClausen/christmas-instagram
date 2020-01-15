@@ -15,6 +15,7 @@
   display: inline-block;
   border-radius: 50%;
   width: 630px;
+  height: 630px;
   opacity: 0.7;
 }
 
@@ -71,4 +72,28 @@ a {
 
 input[type="file"] {
   display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .image-flex {
+    padding-top: 30px;
+  }
+  .image-flex img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .image-flex h1 {
+    font-size: 400px;
+  }
+  .button-structure {
+    width: 400px;
+    height: 70px;
+    margin: 100px auto;
+  }
+
+  .button-structure p {
+    font-size: 22px;
+    font-weight: 350;
+  }
 }

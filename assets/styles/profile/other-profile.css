@@ -1,0 +1,196 @@
+.profile-container {
+  width: 100%;
+  padding-top: 70px;
+}
+
+.profil-information-container {
+  width: 100%;
+  position: fixed;
+  display: block;
+  padding-top: 80px;
+  z-index: 10;
+}
+.profil-flex {
+  display: flex;
+  justify-content: center;
+}
+.profil-flex img {
+  display: inline-block;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+}
+
+.profile-username .profile-followers {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-username p {
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+.profile-followers p {
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.images-container {
+  width: 100%;
+  height: 55vh;
+  margin-top: 50%;
+}
+
+.post-container {
+  padding-top: 150px;
+  margin: auto;
+  width: 721px;
+  height: auto;
+}
+
+.post-container:last-child {
+  margin-bottom: 100px;
+}
+
+.img-container {
+  margin: auto;
+  width: 100%;
+  max-height: 550px;
+  overflow: hidden;
+  border-radius: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 5px auto;
+}
+
+/* biography section */
+
+.biography-section {
+  width: 651px;
+  height: 200px;
+  background-color: #c4c4c4;
+  opacity: 0.3;
+  border-radius: 50px;
+  padding: 30px;
+  margin: auto;
+}
+
+.biography-section p {
+  background-color: #c4c4c4;
+  font-size: 35px;
+  display: inline-block;
+}
+
+.Description {
+  margin: 20px 10px;
+  font-size: 30px;
+}
+
+.follow-button {
+  margin: 50px;
+  height: 80px;
+  width: 200px;
+  background-color: #ffb600;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+.follow-button p {
+  background-color: #ffb600;
+  color: black;
+  font-size: 30px;
+  margin-left: -3px;
+}
+
+@media screen and (min-width: 1000px) {
+  .profil-information-container {
+    margin-top: -20px;
+    padding-top: 20px;
+  }
+
+  .post-container {
+    padding-top: 150px;
+    margin: auto;
+    width: 400px;
+  }
+
+  .img-container {
+    margin: auto;
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-username p {
+    font-size: 25px;
+  }
+
+  .profile-followers p {
+    font-size: 18px;
+  }
+
+  .images-container {
+    width: 100%;
+    height: 55vh;
+    margin-top: 130px;
+  }
+
+  .post-container:last-child {
+    margin-bottom: 100px;
+  }
+
+  .profil-flex img {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* biography section */
+
+  .biography-section {
+    width: 330px;
+    height: 40px;
+    background-color: #c4c4c4;
+    opacity: 0.3;
+    border-radius: 40px;
+    padding: 30px;
+    margin: auto;
+  }
+
+  .biography-section p {
+    background-color: #c4c4c4;
+    font-size: 18px;
+    display: inline-block;
+  }
+
+  .Description {
+    font-size: 18px;
+  }
+
+  .follow-button {
+    margin: 20px 30px 10px 30px;
+    height: 40px;
+    width: 110px;
+  }
+  .follow-button p {
+    font-size: 20px;
+    margin-left: -3px;
+  }
+}

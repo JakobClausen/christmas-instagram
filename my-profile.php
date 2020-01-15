@@ -11,14 +11,16 @@ require __DIR__.'/app/users/show-user-info.php';
 ?>
 
 <link rel="stylesheet" href="/assets/styles/main.css">
-<link rel="stylesheet" href="/assets/styles/my-profile.css">
+<link rel="stylesheet" href="/assets/styles/profile/my-profile.css">
 
 
 <div class="profile-container">
 
     <div class="profil-information-container">
         <div class="profil-flex">
-        <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
+            <div class="profile-img-container">
+                <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
+            </div>
     </div>
     <div class="profile-username profil-flex">
         <p><?php echo $_SESSION['user']['username'] ?></p>
@@ -32,8 +34,11 @@ require __DIR__.'/app/users/show-user-info.php';
 
     <?php foreach ($posts as $post): ?>
 
-            <div class="post-container">
-                <img src="<?php echo $post['image']; ?>" alt="img" class="img">
+            <div class="post-container" id="<?php echo $post["ID"] ?>">
+
+                <div class="img-container">
+                    <img src="<?php echo $post['image']; ?>" alt="img" class="img">
+                </div>
 
 
 
@@ -49,9 +54,15 @@ require __DIR__.'/app/users/show-user-info.php';
 
 
     </div>
+    <form action="/edit.php" method="post">
+        <input style="display:none;" id="input-edit" type="text" name="post-id" value="">
         <div class="button-container">
-        <a href="/edit.php"><button>Edit</button></a>
+        <button type="submit">Edit</button>
         </div>
+        </form>
 
 
 </div>
+
+
+<script src="/assets/scripts/edit.js"></script>

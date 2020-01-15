@@ -5,7 +5,7 @@
   -webkit-box-shadow: 0px 2px 27px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 2px 27px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 27px -8px rgba(0, 0, 0, 0.75);
-  z-index: 10;
+  z-index: 100;
 }
 
 .header-flex {
@@ -18,7 +18,11 @@
   width: 45px;
 }
 
-.header-flex p {
+.header-profile {
+  opacity: 0;
+}
+
+.text-logo {
   font-size: 45px;
   font-weight: 500;
   margin: 0;

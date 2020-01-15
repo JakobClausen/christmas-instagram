@@ -27,11 +27,13 @@ if (isset($_POST['email'],$_POST['password'] )) {
         unset($user['password_hash']);
         $_SESSION['user'] = $user;
         header('location: ../../index.php');
+        exit;
 
 
 
     }else{
         header('location: /login.php');
+        exit;
     }
 
     }

@@ -1,31 +1,29 @@
 .settings-container {
-  margin-top: 150px;
+  margin-top: 130px;
   width: 100%;
   height: calc(100vh - 150px);
 }
 
 .image-flex {
-  padding-top: 130px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.img-container {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  overflow: hidden;
 }
-.image-flex img {
+.img-container img {
+  width: 100%;
+  height: 100%;
   display: inline-block;
-  border-radius: 50%;
-  width: 630px;
-  opacity: 0.7;
-}
-
-.image-flex h1 {
-  position: absolute;
-  background-color: transparent;
-  color: #000000;
-  opacity: 0.7;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 550px;
 }
 
 a {
@@ -44,6 +42,15 @@ a {
   color: black;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.logout {
+  background-color: red;
+  opacity: 0.95;
+}
+
 .button-structure p {
   display: inline-block;
   background-color: transparent;
@@ -51,52 +58,33 @@ a {
   font-weight: 350;
 }
 
-.link {
-  text-decoration: none;
-}
-
-.button-bottom {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
 .button-flex {
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: center;
 }
 
-input[type="file"] {
-  display: none;
-}
 @media screen and (min-width: 1000px) {
   .settings-container {
-    margin-top: 150px;
+    margin-top: 70px;
   }
-
   .image-flex {
-    padding-top: 0;
+    margin-bottom: 50px;
   }
-  .image-flex img {
-    width: 430px;
-    height: 430px;
+  .img-container {
+    width: 170px;
+    height: 170px;
   }
-
-  .image-flex h1 {
-    font-weight: 400;
-    font-size: 550px;
+  .img-container img {
+    width: 100%;
   }
 
   .button-structure {
     width: 450px;
     height: 80px;
+    margin: 40px auto;
   }
-
   .button-structure p {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 350;
   }
 }

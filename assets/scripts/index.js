@@ -6,7 +6,5 @@ imgContainers.forEach(imgContainer => {
 
   images.forEach(image => {
     console.log(image.clientHeight);
-
-    // imgContainer.clientHeight = image.clientHeight;
   });
 });

@@ -26,17 +26,22 @@ require __DIR__.'/app/users/show-user-info.php';
             </div>
 
             <div class="like-container">
-                <div class="like-img hover ">
-                    <img class="like-heart-img not-liked" src="/assets/img/heart-empty.svg" alt="">
+                <form action="index.php" method="post" class="like-form">
+                <div class="like-img hover" onclick="like_add('<?php echo $post['ID'];?>')">
+                    <input style="display: none;" class="like-id">
+                    <img class="like-heart-img" src="/assets/img/heart-empty.svg" alt="">
                     <img class="bookmark-img" src="/assets/img/bookmark.svg" alt="">
                 </div>
+                <p id="likes-value_<?php echo $post['ID'];?>" class="post-likes"><?php echo $post['post_likes'];?> likes</p>
+                </form>
+
             </div>
 
-            <div class="profile-like-container">
-                <div class="profile-right-container">
+            <div class="profile-container">
+                <div class="profile-left-container">
                     <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
 
-                    <div>
+                    <div class="followers">
                         <p><?php echo $post['username']; ?></p>
                         <p>100 Followers</p>
                     </div>
@@ -61,5 +66,8 @@ require __DIR__.'/app/users/show-user-info.php';
 </div>
 
 <section class="button-container"><a href="/upload.php"><button>+</button></a></section>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/assets/scripts/like.js"></script>
+<script src="/assets/scripts/like-update.js"></script>
+
+

@@ -12,14 +12,14 @@ declare(strict_types=1);
 
 <div class="header-flex">
 
-<A href="javascript:javascript:history.go(-1)"><img class="arrow-back" src="../assets/img/arrow-left.png" alt=""></a>
+
+<img class="header-profile" src="../assets/img/right-arrow.svg" alt="">
 
     <p class="text-logo ">FLIPU<span>P</span></p>
 
-    <img class="header-profile" src="../assets/img/user.svg" alt="">
+    <A href="javascript:javascript:history.go(-1)"><img class="arrow-back" src="../assets/img/right-arrow.svg" alt=""></a>
 
     </div>
 
 </div>
-
 

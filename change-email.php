@@ -8,7 +8,7 @@ require __DIR__.'/views/header-upload.php';
 ?>
 
 <link rel="stylesheet" href="/assets/styles/main.css">
-<link rel="stylesheet" href="/assets/styles/change-settings.css">
+<link rel="stylesheet" href="/assets/styles/profile/change-settings.css">
 
 
 <div class="change-cointainer">
