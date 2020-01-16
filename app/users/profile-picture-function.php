@@ -12,6 +12,9 @@ if (isset($_FILES['image'])) {
 
     $query = "UPDATE `users` SET profile_picture = :image WHERE user_id = :id";
     $stmt = $pdo->prepare($query);
+    if (!$stmt) {
+        die(var_dump($pdo->errorInfo()));
+    }
     $stmt->bindParam(':id', $id, PDO::PARAM_STR);
     $stmt->bindParam(':image', $destination);
     $stmt->execute();

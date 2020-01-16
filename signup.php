@@ -8,9 +8,9 @@
 
 <a href="login.php"><img src="/assets/img/arrow.svg" alt=""></a>
 
-<h1 class="logo-log-in">SIGN U<span class="logo-p">P</span></h1>
+    <h1 class="logo-log-in">SIGN U<span class="logo-p">P</span></h1>
 
-<div class="log-in-cointainer">
+    <div class="log-in-cointainer">
 
     <form class="sign-in-form" action="app/users/signup.php" method="post">
 
@@ -33,8 +33,6 @@
         </div><!-- /form-group -->
 
         <button type="submit" class="btn btn-primary">SIGN UP</button>
-
-
 
     </form>
 

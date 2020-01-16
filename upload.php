@@ -6,8 +6,6 @@ require __DIR__.'/views/header-upload.php';
 echo $_SESSION['user']['user_id'];
 ?>
 
-
-
 <link rel="stylesheet" href="/assets/styles/main.css">
 <link rel="stylesheet" href="/assets/styles/upload.css">
 

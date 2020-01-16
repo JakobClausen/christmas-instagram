@@ -27,7 +27,7 @@ require __DIR__.'/app/users/other-profile.php';
     </div>
 
     <div class="profil-flex">
-    <div class="follow-button"><p>Follow</p></div>
+        <div class="follow-button"><p>Follow</p></div>
     </div>
 
 
