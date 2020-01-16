@@ -15,12 +15,18 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
 
     $query = "INSERT INTO `users` (username, email, password_hash) VALUES(:username, :email, :password_hash)";
     $stmt = $pdo->prepare($query);
+    if (!$stmt) {
+        die(var_dump($pdo->errorInfo()));
+    }
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':password_hash', $hash);
     $stmt->execute();
 
     $statement = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+    if (!$statement) {
+        die(var_dump($pdo->errorInfo()));
+    }
     $statement->bindParam(':email', $email, PDO::PARAM_STR);
     $statement->execute();
     $user = $statement->fetch(PDO::FETCH_ASSOC);

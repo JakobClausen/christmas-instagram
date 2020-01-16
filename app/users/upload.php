@@ -19,6 +19,9 @@ if (isset($_FILES['image'], $_POST['biography'])) {
 
     $query = "INSERT INTO `posts4` (post_id, image, description, upload_time, post_likes) VALUES(:post_id, :image, :description, :upload_time, :post_likes)";
     $stmt = $pdo->prepare($query);
+    if (!$stmt) {
+        die(var_dump($pdo->errorInfo()));
+    }
     $stmt->bindParam(':post_id', $id);
     $stmt->bindParam(':image', $destination);
     $stmt->bindParam(':description', $biography);

@@ -20,46 +20,36 @@ require __DIR__.'/app/users/show-user-info.php';
 <?php foreach ($posts as $post): ?>
     <div class="post-container slide">
 
-            <div class="img-container">
+        <div class="img-container">
+            <img class="img-post" src="<?php echo $post['image']; ?>" alt="img" class="img">
+        </div>
 
-                <img class="img-post" src="<?php echo $post['image']; ?>" alt="img" class="img">
-            </div>
-
-            <div class="like-container">
-                <form action="index.php" method="post" class="like-form">
+        <div class="like-container">
+            <form action="index.php" method="post" class="like-form">
                 <div class="like-img hover" onclick="like_add('<?php echo $post['ID'];?>')">
                     <input style="display: none;" class="like-id">
                     <img class="like-heart-img" src="/assets/img/heart-empty.svg" alt="">
                     <img class="bookmark-img" src="/assets/img/bookmark.svg" alt="">
                 </div>
                 <p id="likes-value_<?php echo $post['ID'];?>" class="post-likes"><?php echo $post['post_likes'];?> likes</p>
-                </form>
+            </form>
+        </div>
 
-            </div>
-
-            <div class="profile-container">
-                <div class="profile-left-container">
-                    <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
-
+        <div class="profile-container">
+            <div class="profile-left-container">
+                <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
                     <div class="followers">
                         <p><?php echo $post['username']; ?></p>
                         <p>100 Followers</p>
                     </div>
-
-                </div>
-
-                <div class="follow-button"><p>Follow</p></div>
-
             </div>
+
+        <div class="follow-button"><p>Follow</p></div></div>
 
                 <p class="Description">Description</p>
                 <div class="biography-section">
-
-                <p><?php echo $post['description'] ?></p>
+                    <p><?php echo $post['description'] ?></p>
                 </div>
-
-
-
     </div>
 <?php endforeach; ?>
 
