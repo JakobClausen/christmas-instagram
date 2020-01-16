@@ -7,6 +7,9 @@ if (isset($_POST['biography'], $_POST['post-id'])) {
 
     $query = "UPDATE `posts4` SET description = :newDescription WHERE ID = :id";
     $stmt = $pdo->prepare($query);
+    if (!$stmt) {
+        die(var_dump($pdo->errorInfo()));
+    }
     $stmt->bindParam(':id', $id, PDO::PARAM_STR);
     $stmt->bindParam(':newDescription', $newDescription);
     $stmt->execute();

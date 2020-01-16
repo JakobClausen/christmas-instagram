@@ -17,6 +17,9 @@ if (isset($_POST['current'], $_POST['new'], $_POST['confirm'])) {
 
             $query = "UPDATE `users` SET password_hash = :password_hash WHERE user_id = :id";
             $stmt = $pdo->prepare($query);
+            if (!$stmt) {
+                die(var_dump($pdo->errorInfo()));
+            }
             $stmt->bindParam(':id', $userId, PDO::PARAM_STR);
             $stmt->bindParam(':password_hash', $hash);
             $stmt->execute();

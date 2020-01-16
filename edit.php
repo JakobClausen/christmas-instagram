@@ -15,25 +15,24 @@ require __DIR__.'/app/users/edit.php';
 
 <div class="settings-container">
 
-<div class="post-container" id="<?php echo $posts[0]['ID'] ?>">
-                <div class="img-container">
-                    <img src="<?php echo $posts[0]['image']; ?>" alt="img" class="img">
-                </div>
+    <div class="post-container" id="<?php echo $posts[0]['ID'] ?>">
+        <div class="img-container">
+            <img src="<?php echo $posts[0]['image']; ?>" alt="img" class="img">
+        </div>
 
-                <form action="/app/posts/update.php" method="post">
-                    <div class="textarea-container">
-                        <input style="display: none;" type="text" value="<?php echo $posts[0]['ID'] ?>" name="post-id">
-                        <label class="description" for="biography"> Description:</label>
-                        <textarea class="biography" name="biography"><?php echo $posts[0]['description']; ?></textarea>
-                    </div>
-                        <button type="submit" class="btn btn-change">CHANGE POST</button>
-                </form>
-
-                <form action="/app/posts/delete.php" method="post">
+        <form action="/app/posts/update.php" method="post">
+            <div class="textarea-container">
                 <input style="display: none;" type="text" value="<?php echo $posts[0]['ID'] ?>" name="post-id">
-                <button type="submit" class="btn btn-delete">DELETE POST</button>
-                </form>
+                <label class="description" for="biography"> Description:</label>
+                <textarea class="biography" name="biography"><?php echo $posts[0]['description']; ?></textarea>
+            </div>
 
+            <button type="submit" class="btn btn-change">CHANGE POST</button>
 
+        </form>
 
+        <form action="/app/posts/delete.php" method="post">
+            <input style="display: none;" type="text" value="<?php echo $posts[0]['ID'] ?>" name="post-id">
+            <button type="submit" class="btn btn-delete">DELETE POST</button>
+        </form>
 </div>
