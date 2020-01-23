@@ -4,12 +4,14 @@ require __DIR__.'/app/redirect.php';
 require __DIR__.'/views/header-upload.php';
 require __DIR__.'/app/users/other-profile.php';
 
-
+$userId = (int) $_SESSION['user']['user_id'];
+$chosenProfileId = $posts[0]['user_id'];
+$hasFollowed = getFollowById($userId, $chosenProfileId, $pdo);
+$followers = countFollowers($chosenProfileId, $pdo);
 ?>
 
 <link rel="stylesheet" href="/assets/styles/main.css">
 <link rel="stylesheet" href="/assets/styles/profile/other-profile.css">
-
 
 <div class="profile-container">
 
@@ -23,11 +25,27 @@ require __DIR__.'/app/users/other-profile.php';
     </div>
 
     <div class="profile-followers profil-flex">
-        <p>100 followers</p>
+    <?php if($followers === 0): ?>
+            <p>Waiting for followers!</p>
+    <?php elseif($followers === 1): ?>
+            <p><?php echo $followers ; ?> follower</p>
+    <?php elseif($followers > 1): ?>
+            <p><?php echo $followers ; ?> followers</p>
+    <?php endif;?>
     </div>
 
     <div class="profil-flex">
-    <div class="follow-button"><p>Follow</p></div>
+    <?php if($hasFollowed):?>
+            <form action="/app/follow/unfollow.php" method="post">
+                <input type="hidden" name="user_id" value="<?php echo $chosenProfileId;?>">
+                <input type="submit" value="Unfollow" class="follow-button"></input>
+            </form>
+    <?php else: ?>
+            <form action="/app/follow/follow.php" method="post">
+                <input type="hidden" name="user_id" value="<?php echo $chosenProfileId; ?>">
+                <input type="submit" value="Follow" class="follow-button"></input>
+            </form>
+    <?php endif; ?>
     </div>
 
 
@@ -41,9 +59,6 @@ require __DIR__.'/app/users/other-profile.php';
             <div class="img-container">
                 <img src="<?php echo $post['image']; ?>" alt="img" class="img">
             </div>
-
-
-
                 <p class="Description">Description</p>
 
                 <div class="biography-section">
@@ -53,9 +68,5 @@ require __DIR__.'/app/users/other-profile.php';
 
 
     <?php endforeach; ?>
-
-
     </div>
-
-
 </div>

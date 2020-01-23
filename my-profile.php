@@ -26,7 +26,7 @@ require __DIR__.'/app/users/show-user-info.php';
         <p><?php echo $_SESSION['user']['username'] ?></p>
     </div>
     <div class="profile-followers profil-flex">
-        <p>100 followers</p>
+        <p></p>
         </div>
     </div>
 
