@@ -17,7 +17,7 @@ require __DIR__.'/app/users/search-feed.php';
 </form>
 </div>
 
-
+    
 <div class="result-container" id="output">
 
 </div>
