@@ -3,12 +3,12 @@ declare(strict_types=1);
 require __DIR__.'/app/autoload.php';
 require __DIR__.'/app/redirect.php';
 require __DIR__.'/views/header.php';
-require __DIR__.'/app/users/feedcontent.php';
+// require __DIR__.'/app/users/feedcontent.php';
 require __DIR__.'/app/users/show-user-info.php';
 
 
-
-
+$posts = getPostsByFollow($pdo);
+$comment = getCommentById($pdo);
 ?>
 
 <link rel="stylesheet" href="/assets/styles/like-animation.css">
@@ -42,21 +42,45 @@ require __DIR__.'/app/users/show-user-info.php';
                     <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
 
                     <div class="followers">
-                        <p><?php echo $post['username']; ?></p>
-                        <p>100 Followers</p>
+                        <p><?php echo $post['username'];?></p>
                     </div>
-
                 </div>
-
-                <div class="follow-button"><p>Follow</p></div>
-
             </div>
 
                 <p class="Description">Description</p>
                 <div class="biography-section">
-
-                <p><?php echo $post['description'] ?></p>
+                    <p><?php echo $post['description'] ?></p>
                 </div>
+
+                <?php if($comment):?>
+                <div class="biography-section">
+                    <form action="app/comment/update.php" method="post" >
+                        <label for="comment">Comment</label>
+                        <div>
+                            <textarea type="text" name="comment" placeholder="Add a comment..." cols="30" rows="5"><?php echo $comment['comment']; ?></textarea>
+                        </div>
+                        <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
+                        <input type="submit" value="Edit"></input>
+                    </form>
+
+                    <form action="app/comment/delete.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
+                        <input type="submit" value="Delete"></input>
+                    </form>
+                </div> <!-- /biography-section -->
+                <?php endif ;?>
+
+                <form action="app/comment/store.php" method="post" class="biography-section">
+                    <label for="comment">Comment</label>
+                    <div>
+                        <textarea type="text" name="comment" placeholder="Add a comment..." cols="30" rows="5"></textarea>
+                    </div>
+                    <input type="hidden" name="id" value="<?php echo $post['ID'];?>">
+                    <input type="submit" value="Post"></input>
+                </form>
+
+
+
 
 
 
