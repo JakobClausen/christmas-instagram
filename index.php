@@ -4,20 +4,24 @@ require __DIR__.'/app/autoload.php';
 require __DIR__.'/app/redirect.php';
 require __DIR__.'/views/header.php';
 // require __DIR__.'/app/users/feedcontent.php';
-require __DIR__.'/app/users/show-user-info.php';
+// require __DIR__.'/app/users/show-user-info.php';
 
 
 $posts = getPostsByFollow($pdo);
-$comment = getCommentById($pdo);
+$commentCreator = getCreatorById($pdo);
 ?>
 
 <link rel="stylesheet" href="/assets/styles/like-animation.css">
 <link rel="stylesheet" href="/assets/styles/index.css">
 <link rel="stylesheet" href="/assets/styles/main.css">
+<link rel="stylesheet" href="assets/styles/comment.css">
 
 
 <div class="posts" >
-<?php foreach ($posts as $post): ?>
+<?php foreach ($posts as $post):
+$postId = (int)$post['ID'];
+$comment = getCommentById($postId, $pdo);
+?>
     <div class="post-container slide">
 
             <div class="img-container">
@@ -39,7 +43,7 @@ $comment = getCommentById($pdo);
 
             <div class="profile-container">
                 <div class="profile-left-container">
-                    <img src="<?php echo $info[0]['profile_picture'] ?>" alt="">
+                    <img src="<?php echo $post['profile_picture']?>" alt="profile picture">
 
                     <div class="followers">
                         <p><?php echo $post['username'];?></p>
@@ -53,30 +57,29 @@ $comment = getCommentById($pdo);
                 </div>
 
                 <?php if($comment):?>
-                <div class="biography-section">
-                    <form action="app/comment/update.php" method="post" >
-                        <label for="comment">Comment</label>
-                        <div>
-                            <textarea type="text" name="comment" placeholder="Add a comment..." cols="30" rows="5"><?php echo $comment['comment']; ?></textarea>
-                        </div>
-                        <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
-                        <input type="submit" value="Edit"></input>
-                    </form>
+                <div class="comment-section">
+                    <form action="app/comment/update.php" method="post" class="grey form">
+                        <div class="comment-container">
+                            <p class="grey bold"><?php echo $commentCreator['username'];?></p>
+                            <textarea type="text" class="textarea" name="comment" cols="30" rows="2"><?php echo $comment['comment']; ?></textarea>
+                        </div> <!-- /comment-container -->
+                        <div class="edit-delete-button">
+                            <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
+                            <input type="submit" value="Edit" class="comment-button edit"></input>
+                        </form>
 
-                    <form action="app/comment/delete.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
-                        <input type="submit" value="Delete"></input>
+                        <form action="app/comment/delete.php" method="post" class="grey">
+                            <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
+                            <input type="submit" value="Delete" class="comment-button"></input>
+                        </div> <!-- /edit-delete-button -->
                     </form>
-                </div> <!-- /biography-section -->
+                </div> <!-- /comment-section -->
                 <?php endif ;?>
 
-                <form action="app/comment/store.php" method="post" class="biography-section">
-                    <label for="comment">Comment</label>
-                    <div>
-                        <textarea type="text" name="comment" placeholder="Add a comment..." cols="30" rows="5"></textarea>
-                    </div>
+                <form action="app/comment/store.php" method="post" class="comment-section">
+                    <textarea type="text" name="comment" placeholder="Add a comment..." cols="30" rows="5" class="textarea"></textarea>
                     <input type="hidden" name="id" value="<?php echo $post['ID'];?>">
-                    <input type="submit" value="Post"></input>
+                    <input type="submit" value="Post" class="comment-button"></input>
                 </form>
 
 
