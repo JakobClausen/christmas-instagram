@@ -41,16 +41,30 @@ function getPostsByFollow(PDO $pdo){
     }
 }
 
-function getCommentById (PDO $pdo){
-    $statement=$pdo->prepare('SELECT * FROM comment INNER JOIN posts4 ON comment.post_id = posts4.ID');
+function getCommentById (int $postId, PDO $pdo){
+    $statement=$pdo->prepare('SELECT * FROM comment INNER JOIN posts4 ON comment.post_id = :postId');
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
     }
+    $statement->bindParam(':postId', $postId, PDO::PARAM_INT);
     $statement->execute();
     $comment = $statement->fetch(PDO::FETCH_ASSOC);
 
     if($comment){
         return $comment;
+    }
+}
+
+function getCreatorById (PDO $pdo){
+    $statement=$pdo->prepare('SELECT username FROM comment INNER JOIN users ON comment.user_id = users.user_id');
+    if (!$statement) {
+        die(var_dump($pdo->errorInfo()));
+    }
+    $statement->execute();
+    $creator = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if($creator){
+        return $creator;
     }
 }
 
