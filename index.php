@@ -8,7 +8,6 @@ require __DIR__.'/views/header.php';
 
 
 $posts = getPostsByFollow($pdo);
-$commentCreator = getCreatorById($pdo);
 ?>
 
 <link rel="stylesheet" href="/assets/styles/like-animation.css">
@@ -19,8 +18,9 @@ $commentCreator = getCreatorById($pdo);
 
 <div class="posts" >
 <?php foreach ($posts as $post):
-$postId = (int)$post['ID'];
-$comment = getCommentById($postId, $pdo);
+$postId = (int) $post['ID'];
+$userId = $_SESSION['user']['user_id'];
+$comments = getCommentById($postId, $pdo);
 ?>
     <div class="post-container slide">
 
@@ -56,13 +56,19 @@ $comment = getCommentById($postId, $pdo);
                     <p><?php echo $post['description'] ?></p>
                 </div>
 
-                <?php if($comment):?>
+                <?php if($comments):?>
+                    <?php foreach ($comments as $comment): ?>
+                        <?php
+                        $commentCreatorId = (int) $comment['user_id'];
+                        $commentCreator = getCreatorById($commentCreatorId, $pdo);
+                        ?>
                 <div class="comment-section">
                     <form action="app/comment/update.php" method="post" class="grey form">
                         <div class="comment-container">
                             <p class="grey bold"><?php echo $commentCreator['username'];?></p>
                             <textarea type="text" class="textarea" name="comment" cols="30" rows="2"><?php echo $comment['comment']; ?></textarea>
                         </div> <!-- /comment-container -->
+                        <?php if ($userId === $comment['user_id']): ?>
                         <div class="edit-delete-button">
                             <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
                             <input type="submit" value="Edit" class="comment-button edit"></input>
@@ -72,8 +78,10 @@ $comment = getCommentById($postId, $pdo);
                             <input type="hidden" name="id" value="<?php echo $comment['id'];?>">
                             <input type="submit" value="Delete" class="comment-button"></input>
                         </div> <!-- /edit-delete-button -->
+                        <?php endif; ?>
                     </form>
                 </div> <!-- /comment-section -->
+                <?php endforeach; ?>
                 <?php endif ;?>
 
                 <form action="app/comment/store.php" method="post" class="comment-section">
@@ -81,12 +89,6 @@ $comment = getCommentById($postId, $pdo);
                     <input type="hidden" name="id" value="<?php echo $post['ID'];?>">
                     <input type="submit" value="Post" class="comment-button"></input>
                 </form>
-
-
-
-
-
-
     </div>
 <?php endforeach; ?>
 
