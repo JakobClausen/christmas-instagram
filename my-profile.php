@@ -34,20 +34,18 @@ require __DIR__.'/app/users/show-user-info.php';
 
     <?php foreach ($posts as $post): ?>
 
-            <div class="post-container" id="<?php echo $post["ID"] ?>">
+        <div class="post-container" id="<?php echo $post["ID"] ?>">
 
-                <div class="img-container">
-                    <img src="<?php echo $post['image']; ?>" alt="img" class="img">
-                </div>
+            <div class="img-container">
+                <img src="<?php echo $post['image']; ?>" alt="img" class="img">
+            </div>
 
+            <p class="Description">Description</p>
 
-
-                <p class="Description">Description</p>
-
-                <div class="biography-section">
+            <div class="biography-section">
                 <p><?php echo $post['description'] ?></p>
-                </div>
-                </div>
+            </div>
+        </div>
 
 
     <?php endforeach; ?>

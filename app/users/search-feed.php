@@ -9,7 +9,6 @@
     if (!$stmt) {
         die(var_dump($pdo->errorInfo()));
     }
-
     $stmt->execute();
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
