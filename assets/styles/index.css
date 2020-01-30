@@ -183,6 +183,7 @@ button {
   justify-content: space-between;
   width: 651px;
   height: 100px;
+  padding: 30px;
   background-color: #e9e9ed;
   border-radius: 30px;
   margin: 15px auto;

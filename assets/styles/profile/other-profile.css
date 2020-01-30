@@ -108,6 +108,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 40px;
+  font-size: 16px;
 }
 .follow-button p {
   background-color: #ffb600;
