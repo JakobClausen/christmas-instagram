@@ -21,15 +21,15 @@ if (isset($_POST['searchval'])) {
         $profilePage = "/other-profile.php";
         $id = $user['user_id'];
 
-
              echo "<form action='$profilePage' method='post'>
              <label>
-             <input style='display: none;' type='submit' name='id'value='$id' \ >
+             <input style='display: none;' type='submit' name='id' value='$id'/>
              <div class='result-user'>
                 <img src='$profilePicture' alt=''>
             <p>$username</p> <br>
             </div>
-            </label>";
+            </label>
+            </form>";
 
     };
 
