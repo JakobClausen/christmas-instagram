@@ -13,5 +13,3 @@ $userId = $_SESSION['user']['user_id'];
 
     $stmt->execute();
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-

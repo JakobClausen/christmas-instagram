@@ -5,7 +5,6 @@ require __DIR__.'/../autoload.php';
 
 
 if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
-
     $username = filter_var(trim($_POST['username']), FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = $_POST['password'];
@@ -31,10 +30,4 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
     $_SESSION['user'] = $user;
     header('location: ../../add-profile-picture.php');
     exit;
-
-
-
-
-
 }
-

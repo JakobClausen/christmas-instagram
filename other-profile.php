@@ -25,17 +25,17 @@ $followers = countFollowers($chosenProfileId, $pdo);
     </div>
 
     <div class="profile-followers profil-flex">
-    <?php if($followers === 0): ?>
+    <?php if ($followers === 0): ?>
             <p>Waiting for followers!</p>
-    <?php elseif($followers === 1): ?>
+    <?php elseif ($followers === 1): ?>
             <p><?php echo $followers ; ?> follower</p>
-    <?php elseif($followers > 1): ?>
+    <?php elseif ($followers > 1): ?>
             <p><?php echo $followers ; ?> followers</p>
     <?php endif;?>
     </div>
 
     <div class="profil-flex">
-    <?php if($hasFollowed):?>
+    <?php if ($hasFollowed):?>
             <form action="/app/follow/unfollow.php" method="post">
                 <input type="hidden" name="user_id" value="<?php echo $chosenProfileId;?>">
                 <input type="submit" value="Unfollow" class="follow-button"></input>

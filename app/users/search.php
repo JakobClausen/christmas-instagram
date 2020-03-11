@@ -21,7 +21,7 @@ if (isset($_POST['searchval'])) {
         $profilePage = "/other-profile.php";
         $id = $user['user_id'];
 
-             echo "<form action='$profilePage' method='post'>
+        echo "<form action='$profilePage' method='post'>
              <label>
              <input style='display: none;' type='submit' name='id' value='$id'/>
              <div class='result-user'>
@@ -30,7 +30,5 @@ if (isset($_POST['searchval'])) {
             </div>
             </label>
             </form>";
-
     };
-
 };

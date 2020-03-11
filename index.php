@@ -56,7 +56,7 @@ $comments = getCommentById($postId, $pdo);
                     <p><?php echo $post['description'] ?></p>
                 </div>
 
-                <?php if($comments):?>
+                <?php if ($comments):?>
                     <?php foreach ($comments as $comment): ?>
                         <?php
                         $commentCreatorId = (int) $comment['user_id'];

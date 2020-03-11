@@ -14,7 +14,3 @@
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     shuffle($posts);
-
-
-
-

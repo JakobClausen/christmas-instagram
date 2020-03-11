@@ -12,8 +12,6 @@ if (isset($_POST['current'], $_POST['new'], $_POST['confirm'])) {
 
     if ($current === $info[0]['email']) {
         if ($new === $confirm) {
-
-
             $query = "UPDATE `users` SET email = :email WHERE user_id = :id";
             $stmt = $pdo->prepare($query);
             $stmt->bindParam(':id', $userId, PDO::PARAM_STR);

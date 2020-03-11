@@ -14,7 +14,8 @@ function countFollowers(int $chosenProfileId, PDO $pdo): int
     return (int)$followers['COUNT(*)'];
 }
 
-function getFollowById(int $userId, int $chosenProfileId, PDO $pdo){
+function getFollowById(int $userId, int $chosenProfileId, PDO $pdo)
+{
     $statement=$pdo->prepare('SELECT * FROM follow WHERE user_id_0 = :userId AND user_id_1 = :chosenProfileId ');
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
@@ -25,10 +26,10 @@ function getFollowById(int $userId, int $chosenProfileId, PDO $pdo){
     $hasFollowed = $statement->fetch(PDO::FETCH_ASSOC);
 
     return $hasFollowed;
-
 }
 
-function getPostsByFollow(PDO $pdo){
+function getPostsByFollow(PDO $pdo)
+{
     $statement=$pdo->prepare('SELECT * FROM posts4 INNER JOIN follow ON post_id = user_id_1 INNER JOIN users ON post_id = user_id ORDER BY upload_time DESC');
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
@@ -36,12 +37,13 @@ function getPostsByFollow(PDO $pdo){
     $statement->execute();
     $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-    if($posts){
+    if ($posts) {
         return $posts;
     }
 }
 
-function getCommentById (int $postId, PDO $pdo){
+function getCommentById(int $postId, PDO $pdo)
+{
     $statement=$pdo->prepare('SELECT * FROM comment INNER JOIN posts4 ON comment.post_id = posts4.ID WHERE posts4.ID = :postId');
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
@@ -50,12 +52,13 @@ function getCommentById (int $postId, PDO $pdo){
     $statement->execute();
     $comments = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-    if($comments){
+    if ($comments) {
         return $comments;
     }
 }
 
-function getCreatorById (int $commentCreatorId, PDO $pdo){
+function getCreatorById(int $commentCreatorId, PDO $pdo)
+{
     $statement=$pdo->prepare('SELECT username, comment.user_id FROM comment INNER JOIN users ON comment.user_id = users.user_id WHERE comment.user_id = :commentCreatorId');
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
@@ -64,8 +67,7 @@ function getCreatorById (int $commentCreatorId, PDO $pdo){
     $statement->execute();
     $creator = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if($creator){
+    if ($creator) {
         return $creator;
     }
 }
-

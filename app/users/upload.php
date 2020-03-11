@@ -6,14 +6,14 @@ require __DIR__.'/../autoload.php';
 
 
 if (isset($_FILES['image'], $_POST['biography'])) {
-   $image =  $_FILES['image'];
-   $biography = $_POST['biography'];
-   $id = $_SESSION['user']['user_id'];
-   $dateTime = date("Y/m/d-H/i/s");
-   $likes = 0;
+    $image =  $_FILES['image'];
+    $biography = $_POST['biography'];
+    $id = $_SESSION['user']['user_id'];
+    $dateTime = date("Y/m/d-H/i/s");
+    $likes = 0;
 
 
-   $destination = '../../assets/img/'.date('ymd').'-'.$image['name'];
+    $destination = '../../assets/img/'.date('ymd').'-'.$image['name'];
 
     move_uploaded_file($image['tmp_name'], $destination);
 
@@ -34,9 +34,4 @@ if (isset($_FILES['image'], $_POST['biography'])) {
 
     header('Location: /../../../index.php');
     exit;
-
-
-
-
-
 }

@@ -13,9 +13,4 @@ if (isset($_POST['id'])) {
 
     $stmt->execute();
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
 }
-
-
-

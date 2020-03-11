@@ -13,5 +13,3 @@ $userId = $_SESSION['user']['user_id'];
 
     $stmt->execute();
     $info = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-

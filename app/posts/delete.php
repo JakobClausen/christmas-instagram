@@ -11,7 +11,7 @@ if (isset($_POST['post-id'])) {
         die(var_dump($pdo->errorInfo()));
     }
     $stmt->execute();
- }
+}
 
  header('Location: /../../../my-profile.php');
  exit;

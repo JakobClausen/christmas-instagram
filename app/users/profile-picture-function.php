@@ -2,10 +2,10 @@
 declare(strict_types=1);
 
 if (isset($_FILES['image'])) {
-   $image =  $_FILES['image'];
-   $id = $_SESSION['user']['user_id'];
+    $image =  $_FILES['image'];
+    $id = $_SESSION['user']['user_id'];
 
-   $destination = '../../assets/img/'.date('ymd').'-'.$image['name'];
+    $destination = '../../assets/img/'.date('ymd').'-'.$image['name'];
 
 
     move_uploaded_file($image['tmp_name'], $destination);
@@ -15,5 +15,4 @@ if (isset($_FILES['image'])) {
     $stmt->bindParam(':id', $id, PDO::PARAM_STR);
     $stmt->bindParam(':image', $destination);
     $stmt->execute();
-
 }
